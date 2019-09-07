@@ -1,0 +1,31 @@
+---
+- name: Lancement du playbook en local
+  hosts: 127.0.0.1
+  connection: local
+  become: yes
+  gather_facts: no
+
+  tasks:
+   - name: update cache apt
+     apt:
+         update_cache: yes
+
+   - name: update system
+     apt:
+         upgrade: yes
+
+   - name: installations basic tools
+     apt:
+         name: "{{item}}"
+         state: present
+     with_items:
+         - htop
+         - git
+         - traceroute
+         - python3-pip
+         - openvpn
+         - ubuntu-unity-desktop
+         - aptitude
+         - terminator
+         - locate
+         - curl
