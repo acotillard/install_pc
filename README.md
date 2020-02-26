@@ -3,4 +3,4 @@ ansible to install locally your need
 
 Requirement:
 
-sudo apt install sudo ansible
+sudo apt install ansible
