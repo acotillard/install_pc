@@ -3,7 +3,7 @@ ansible to install locally what i need on my desktop :)
 
 ## Requirement:
 ```sh
-# sudo apt install ansible
+# sudo apt install ansible gpg -y
 ```
 ## Deploy
 ```sh
