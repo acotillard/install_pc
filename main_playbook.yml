@@ -42,6 +42,12 @@
          - locate
          - curl
          - apt-transport-https
+         - nmap
+         - dnsutils
+         - tcpdump
+         - lsscsi
+         - fdisk
+         - gdisk
 
    - name: install vscode
      apt:
