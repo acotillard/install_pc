@@ -14,7 +14,7 @@
 
    - name: add repo vscode          
      apt_repository:
-                    repo: deb [arch=amd64 signed-by=/usr/share/keyrings/packages.microsoft.gpg] https://packages.microsoft.com/repos/vscode stable main
+                    repo: "deb [arch=amd64 signed-by=/usr/share/keyrings/packages.microsoft.gpg] https://packages.microsoft.com/repos/vscode stable main"
                     state: present
 
    - name: update cache apt
