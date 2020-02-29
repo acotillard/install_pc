@@ -6,6 +6,17 @@
   gather_facts: no
 
   tasks:
+   - name: add key vscode
+     apt_key:
+             url: https://packages.microsoft.com/keys/microsoft.asc
+             state: present
+             keyring: /usr/share/keyrings/packages.microsoft.gpg
+
+   - name: add repo vscode          
+     apt_repository:
+                    repo: deb [arch=amd64 signed-by=/usr/share/keyrings/packages.microsoft.gpg] https://packages.microsoft.com/repos/vscode stable main
+                    state: present
+
    - name: update cache apt
      apt:
          update_cache: yes
@@ -16,9 +27,10 @@
 
    - name: installations basic tools
      apt:
-         name: "{{item}}"
+         name: "{{ packages }}"
          state: present
-     with_items:
+     vars:
+       packages:
          - htop
          - git
          - traceroute
@@ -29,3 +41,9 @@
          - terminator
          - locate
          - curl
+         - apt-transport-https
+
+   - name: install vscode
+     apt:
+         name: code
+         state: present
