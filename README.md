@@ -1,7 +1,7 @@
 # install_pc
 ansible to install locally what i need on my desktop :) 
 
-## Requirement:
+## Requirement
 ```sh
 # sudo apt install ansible gpg -y
 ```
