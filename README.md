@@ -1,11 +1,11 @@
 # install_pc
 ansible to install locally what i need on my desktop :) 
 
-##Requirement:
+## Requirement:
 ```sh
 # sudo apt install ansible
 ```
-## deploy
+## Deploy
 ```sh
 # ansible-playbook main_playbook.yml -K
 ```
