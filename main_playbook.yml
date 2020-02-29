@@ -17,12 +17,15 @@
                     repo: "deb [arch=amd64 signed-by=/usr/share/keyrings/packages.microsoft.gpg] https://packages.microsoft.com/repos/vscode stable main"
                     state: present
 
-   - name: update cache apt
-     apt:
-         update_cache: yes
+- name: remove bad repo          
+     apt_repository:
+                    repo: "deb [arch=amd64] http://packages.microsoft.com/repos/vscode stable main"
+                    state: absent
+
 
    - name: update system
      apt:
+         update_cache: yes
          upgrade: yes
 
    - name: installations basic tools
