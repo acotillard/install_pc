@@ -51,6 +51,8 @@
          - lsscsi
          - fdisk
          - gdisk
+         - firefox
+         - net-tools
 
    - name: install vscode
      apt:
