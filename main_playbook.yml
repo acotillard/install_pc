@@ -53,6 +53,8 @@
          - gdisk
          - firefox
          - net-tools
+         - vagrant
+         - virtualbox
 
    - name: install vscode
      apt:
